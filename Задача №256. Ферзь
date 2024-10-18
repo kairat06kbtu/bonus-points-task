@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int queenRow, queenCol, targetRow, targetCol;
+    cin >> queenRow >> queenCol >> targetRow >> targetCol;
+
+    // Ферзь бьет, если он в одной строке, одном столбце или на одной диагонали
+    if (queenRow == targetRow || queenCol == targetCol || 
+        abs(queenRow - targetRow) == abs(queenCol - targetCol)) {
+        cout << "YES" << endl; // Ферзь может побить фигуру
+    } else {
+        cout << "NO" << endl;  // Ферзь не может побить фигуру
+    }
+
+    return 0;
+}
