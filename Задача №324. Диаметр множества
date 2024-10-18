@@ -1,0 +1,38 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+struct Point {
+    int x;
+    int y;
+};
+
+double distance(const Point& a, const Point& b) {
+    return sqrt(static_cast<double>((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y)));
+}
+
+int main() {
+    int n;
+    cin >> n;
+    
+    Point points[100];
+    
+    for (int i = 0; i < n; i++) {
+        cin >> points[i].x >> points[i].y;
+    }
+    
+    double maxDiameter = 0.0;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            double d = distance(points[i], points[j]);
+            if (d > maxDiameter) {
+                maxDiameter = d;
+            }
+        }
+    }
+
+    cout << fixed << setprecision(15) << maxDiameter << endl;
+    return 0;
+}
