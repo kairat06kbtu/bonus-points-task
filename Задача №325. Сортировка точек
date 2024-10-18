@@ -1,0 +1,42 @@
+#include <iostream>
+#include <iomanip>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+struct Point {
+    int x;
+    int y;
+
+    // Функция для вычисления расстояния от начала координат
+    double distance() const {
+        return sqrt(static_cast<double>(x * x + y * y));
+    }
+};
+
+// Сравнение точек по расстоянию от начала координат
+bool compare(const Point& a, const Point& b) {
+    return a.distance() < b.distance();
+}
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector<Point> points(n);
+
+    for (int i = 0; i < n; i++) {
+        cin >> points[i].x >> points[i].y;
+    }
+
+    // Сортировка точек по расстоянию
+    sort(points.begin(), points.end(), compare);
+
+    // Вывод отсортированных точек
+    for (const auto& point : points) {
+        cout << point.x << " " << point.y << endl;
+    }
+
+    return 0;
+}
