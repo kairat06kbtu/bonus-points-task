@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int systemAnswer, studentAnswer;
+    cin >> systemAnswer >> studentAnswer;
+
+    bool isCorrect = (systemAnswer == 1 && studentAnswer == 1) || (systemAnswer != 1 && studentAnswer != 1);
+    
+    cout << (isCorrect ? "YES" : "NO") << endl;
+    return 0;
+}
