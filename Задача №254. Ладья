@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int rookRow, rookCol, targetRow, targetCol;
+    cin >> rookRow >> rookCol >> targetRow >> targetCol;
+
+    if (rookRow == targetRow || rookCol == targetCol) {
+        cout << "YES" << endl; // Ладья бьет, если они в одной строке или одном столбце
+    } else {
+        cout << "NO" << endl;  // Иначе не бьет
+    }
+
+    return 0;
+}
