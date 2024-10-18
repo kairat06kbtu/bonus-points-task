@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int startX, startY, endX, endY;
+    cin >> startX >> startY >> endX >> endY;
+
+    // Проверяем, может ли король сделать ход
+    if ((abs(startX - endX) <= 1) && (abs(startY - endY) <= 1)) {
+        cout << "YES" << endl; // Король может сделать ход
+    } else {
+        cout << "NO" << endl;  // Король не может сделать ход
+    }
+
+    return 0;
+}
