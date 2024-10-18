@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cin >> a >> b >> c;
+
+    int maxNum = a; // Предположим, что a — максимальное число
+
+    if (b > maxNum) {
+        maxNum = b; // Если b больше, обновляем maxNum
+    }
+    
+    if (c > maxNum) {
+        maxNum = c; // Если c больше, обновляем maxNum
+    }
+    
+    cout << maxNum << endl; // Выводим максимальное число
+    return 0;
+}
