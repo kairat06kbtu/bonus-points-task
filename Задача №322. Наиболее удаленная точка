@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    int maxDistance = -1;
+    int bestX = 0, bestY = 0;
+
+    for (int i = 0; i < n; i++) {
+        int x, y;
+        cin >> x >> y;
+        int distance = x * x + y * y;
+
+        if (distance > maxDistance) {
+            maxDistance = distance;
+            bestX = x;
+            bestY = y;
+        }
+    }
+
+    cout << bestX << " " << bestY << endl;
+    return 0;
+}
