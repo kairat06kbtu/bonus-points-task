@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cmath>
+
+int main() {
+    int a, b;
+    std::cin >> a >> b;
+
+    for (int i = std::ceil(std::sqrt(a)); i <= std::sqrt(b); i++) {
+        std::cout << i * i << " ";
+    }
+
+    return 0;
+}
