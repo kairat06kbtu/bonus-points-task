@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int k, n;
+    cin >> k >> n;
+
+    int page = (n - 1) / k + 1;  // Номер страницы
+    int lineOnPage = n % k;      // Номер строки на странице
+
+    if (lineOnPage == 0) { // Если остаток 0, значит это последняя строка на странице
+        lineOnPage = k;
+    }
+
+    cout << page << " " << lineOnPage << endl; // Выводим результат
+    return 0;
+}
