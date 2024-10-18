@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int d;
+    cin >> d;
+
+    int h = (d / 30) % 12; // Вычисляем целые часы (в формате 12-часового времени)
+    int m = (d % 30) * 2;  // Вычисляем целые минуты
+
+    cout << "It is " << h << " hours " << m << " minutes." << endl; // Выводим результат
+
+    return 0;
+}
