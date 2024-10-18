@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    long long n, m; // Используем long long для работы с большими числами
+    cin >> n >> m;
+
+    long long maxRabbitsInOneCell = (m + n - 1) / n; // Максимальное количество зайцев в одной клетке
+    cout << maxRabbitsInOneCell << endl;
+
+    return 0;
+}
