@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    long long N; // Используем long long для работы с большими числами
+    cin >> N;
+
+    long long sum;
+    if (N > 0) {
+        sum = N * (N + 1) / 2; // Сумма для положительного N
+    } else {
+        sum = N * (N - 1) / 2; // Сумма для отрицательного N
+    }
+
+    cout << sum << endl; // Выводим результат
+    return 0;
+}
