@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int bishopRow, bishopCol, targetRow, targetCol;
+    cin >> bishopRow >> bishopCol >> targetRow >> targetCol;
+
+    // Слон бьет, если разница между координатами равна
+    if (abs(bishopRow - targetRow) == abs(bishopCol - targetCol)) {
+        cout << "YES" << endl; // Слон может побить фигуру
+    } else {
+        cout << "NO" << endl;  // Слон не может побить фигуру
+    }
+
+    return 0;
+}
