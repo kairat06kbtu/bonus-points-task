@@ -1,0 +1,14 @@
+#include <iostream>
+
+int main() {
+    int x, sum = 0;
+    std::cin >> x;
+
+    while (x > 0) {
+        sum += x % 10;
+        x /= 10;
+    }
+
+    std::cout << sum << std::endl;
+    return 0;
+}
